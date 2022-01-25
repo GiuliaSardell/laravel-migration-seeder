@@ -13,14 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', 'PageController@index')->name('home');
 
-Route::get('/trip', function () {
-    return view('trip');
-})->name('trip');
+Route::get('/trip', 'PageController@trip')->name('trip');
 
-Route::get('/link', function () {
-    return view('link');
-})->name('link');
+Route::get('/link', 'PageController@link')->name('link');
